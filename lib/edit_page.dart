@@ -4,7 +4,7 @@ import 'package:flutter_2/home_page.dart';
 
 
 class EditPage extends StatefulWidget {
-  const EditPage({Key key}) : super(key: key);
+  const EditPage({Key? key}) : super(key: key);
 
   @override
   _EditPageState createState() => _EditPageState();
@@ -27,7 +27,7 @@ class _EditPageState extends State<EditPage> {
             textAlign: TextAlign.justify,
           ),
           centerTitle: true,
-          leading: FlatButton.icon(
+          leading: ElevatedButton.icon(
             onPressed: (){
               Navigator.pop(context);
             },
@@ -44,7 +44,7 @@ class _EditPageState extends State<EditPage> {
           ),
           leadingWidth: 100,
           actions: [
-            FlatButton.icon(
+            ElevatedButton.icon(
               onPressed: (){
                 Navigator.push(
                   context,

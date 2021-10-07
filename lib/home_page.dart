@@ -5,7 +5,7 @@ import 'package:flutter_2/edit_page.dart';
 
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                         child: RichText(
                           textAlign: TextAlign.justify,
                           text: TextSpan(
-                              text: "Saied Ahammed Foyez\n",
+                              text: "Fatin Abrar\n",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w700,
@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               children: [
                                 TextSpan(
-                                  text: "217/A/1,South Perirbagh,Mirpur-2,Dhaka-1216",
+                                  text: "kdjasfisufb",
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w400,
@@ -131,8 +131,18 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
+
               ),
+              Container(
+                height: MediaQuery.of(context).size.height/4,
+                width: MediaQuery.of(context).size.width/3,
+                child: Text(
+                  "Hi I am Fatin Abrar"
+                ),
+              )
             ],
+
+
           ),
         ),
       ),

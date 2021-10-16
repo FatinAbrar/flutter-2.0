@@ -64,7 +64,7 @@ class _EditPageState extends State<EditPage> {
                 ),
               ),
             ),
-          ]
+          ],
       ),
       extendBodyBehindAppBar: true,
       backgroundColor: Color.fromRGBO(198, 192, 209,1),

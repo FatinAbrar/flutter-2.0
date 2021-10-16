@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     style: BorderStyle.solid,
                   ),
                   image: DecorationImage(
-                    image: AssetImage("images/Cover_Image.png"),
+                    image: AssetImage("images/maxresdefault.jpg"),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: MediaQuery.of(context).size.height/4,
                 width: MediaQuery.of(context).size.width,
                 child: Text(
-                  "Welcome To flutter advance project. It is an ICTD Project. Iet's enter in it.",
+                  "Welcome To flutter advance project.  Iet's enter in it.",
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.w900,

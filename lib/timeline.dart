@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_2/Splash_screen.dart';
 import 'package:flutter_2/home_page.dart';
-import 'package:flutter_2/models/timeline.dart';
 import 'package:flutter_2/timelinemodel.dart';
 
 List<String> images = [
@@ -21,83 +20,83 @@ List<String> images = [
 
 List<Timelinemodel> timelinemodels = [
   Timelinemodel(
-      username: "Abdur Rajjak",
+      username: "Nico robin",
       profileImageURL:
           "images/127452621_3762957817088549_8910024106066630309_n.jpg/user_1.jpg",
-      address: "Khulna-9100,Khulna,Bangladesh",
-      caption: "Visit khulna district and other places",
+      address: "Ennis lobby",
+      caption: "Visit One piece world and other places",
       postsImageURl: "images/posts/post1.jpg",
       likes: 234),
   Timelinemodel(
-      username: "Shakib Al Hasan",
+      username: "Franky",
       profileImageURL:
           "images/127452621_3762957817088549_8910024106066630309_n.jpg/user_2.jpg",
-      address: "Khulna-9100,Khulna,Bangladesh",
-      caption: "Visit khulna district and other places",
+      address: "Water 7 land",
+      caption: "Visit One piece world and other places",
       postsImageURl: "images/posts/post2.jpg",
       likes: 213),
   Timelinemodel(
-      username: "Tawsif Mahbub",
+      username: "Brook",
       profileImageURL:
           "images/127452621_3762957817088549_8910024106066630309_n.jpg/user_3.jpg",
-      address: "Khulna-9100,Khulna,Bangladesh",
-      caption: "Visit khulna district and other places",
+      address: "Thilear Bark",
+      caption: "Visit One piece world and other places",
       postsImageURl: "images/posts/post3.jpg",
       likes: 456),
   Timelinemodel(
-      username: "Mosharraf Karim",
+      username: "White beard & Ace",
       profileImageURL:
           "images/127452621_3762957817088549_8910024106066630309_n.jpg/user_4.jpg",
-      address: "Khulna-9100,Khulna,Bangladesh",
-      caption: "Visit khulna district and other places",
+      address: "Marin Ford",
+      caption: "Visit One piece world and other places",
       postsImageURl: "images/posts/post4.jpg",
       likes: 678),
   Timelinemodel(
-      username: "Chanchal Chowdhury",
+      username: "jimbe",
       profileImageURL:
           "images/127452621_3762957817088549_8910024106066630309_n.jpg/user_5.jpg",
-      address: "Khulna-9100,Khulna,Bangladesh",
-      caption: "Visit khulna district and other places",
+      address: "Fish Man Island",
+      caption: "Visit One piece world and other places",
       postsImageURl: "images/posts/post5.jpg",
       likes: 786),
   Timelinemodel(
-      username: "Afran Nisho",
+      username: "Trafalger D. Law",
       profileImageURL:
           "images/127452621_3762957817088549_8910024106066630309_n.jpg/user_6.jpg",
-      address: "Khulna-9100,Khulna,Bangladesh",
-      caption: "Visit khulna district and other places",
+      address: "pank Hazadrd",
+      caption: "Visit One piece world and other places",
       postsImageURl: "images/posts/post6.jpg",
       likes: 5678),
   Timelinemodel(
-      username: "Ziaul Faruq Apurba",
+      username: "Sabo",
       profileImageURL:
           "images/127452621_3762957817088549_8910024106066630309_n.jpg/user_7.jpg",
-      address: "Khulna-9100,Khulna,Bangladesh",
-      caption: "Visit khulna district and other places",
+      address: "Dressrosa",
+      caption: "Visit One piece world and other places",
       postsImageURl: "images/posts/post7.jpg",
       likes: 565),
   Timelinemodel(
-      username: "Siam Ahmed",
+      username: "Samurai & mink",
       profileImageURL:
           "images/127452621_3762957817088549_8910024106066630309_n.jpg/user_8.jpg",
-      address: "Khulna-9100,Khulna,Bangladesh",
-      caption: "Visit khulna district and other places",
+      address: "Zua island",
+      caption: "Visit One piece world and other places",
       postsImageURl: "images/posts/post8.jpg",
       likes: 6789),
   Timelinemodel(
-      username: "Zakia Bari Mamo",
+      username: "3rd yanko Big mom",
       profileImageURL:
           "images/127452621_3762957817088549_8910024106066630309_n.jpg/user_9.jpg",
-      address: "Khulna-9100,Khulna,Bangladesh",
-      caption: "Visit khulna district and other places",
+      address: "Whole cake island",
+      caption: "Visit One piece world and other places",
       postsImageURl: "images/posts/post9.jpg",
       likes: 6754),
   Timelinemodel(
-      username: "Mashrafe Mortaza",
+      username: "2nd yanko Kaido Yamato & Zoro",
       profileImageURL:
           "images/127452621_3762957817088549_8910024106066630309_n.jpg/user_10.jpg",
-      address: "Khulna-9100,Khulna,Bangladesh",
-      caption: "Visit khulna district and other places",
+      address: "Wano",
+      caption: "Visit One piece world and other places",
       postsImageURl: "images/posts/post10.jpg",
       likes: 454),
 ];

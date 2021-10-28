@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_2/home_page.dart';
 
 class FollowingPage extends StatefulWidget {
-  const FollowingPage({Key key}) : super(key: key);
+  const FollowingPage({Key? key}) : super(key: key);
 
   @override
   _FollowingPageState createState() => _FollowingPageState();

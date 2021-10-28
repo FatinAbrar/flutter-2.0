@@ -57,14 +57,14 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+
   assets:
-    - image/127452621_3762957817088549_8910024106066630309_n.jpg
-    - image/maxresdefault.jpg
+    - images/
+    - images/posts/
 
 
-   For details regarding adding assets from package dependencies, see
-   https://flutter.dev/assets-and-images/#from-packages
+  #   For details regarding adding assets from package dependencies, see
+  #   https://flutter.dev/assets-and-images/#from-packages
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a

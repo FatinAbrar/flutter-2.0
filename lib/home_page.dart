@@ -7,7 +7,7 @@ import 'package:flutter_2/Follower_page.dart';
 import 'package:flutter_2/Posts_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -91,7 +91,8 @@ class _HomePageState extends State<HomePage> {
                         shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.circular(15),
                         image: DecorationImage(
-                          image: AssetImage("images/Profile_Image.jpg"),
+                          image: AssetImage(
+                              "images/127452621_3762957817088549_8910024106066630309_n.jpg"),
                           fit: BoxFit.cover,
                         ),
                         border: Border.all(
@@ -220,7 +221,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context)=>Posts_page(),
+                              builder: (context) => PostsPage(),
                             ),
                           );
                         },

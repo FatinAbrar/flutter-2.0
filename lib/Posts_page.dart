@@ -1,94 +1,84 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_2/home_page.dart';
-import 'package:flutter_2/models/Posts_Model.dart';
-
+import 'package:flutter_2/models/posts_Model.dart';
+import './post_models.dart';
 
 List<Posts> posts = [
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
     caption: "Visit khulna district and other places",
-    postImage: "images/Posts/Post_1.jpg",
+    postImage: "images/posts/post1.jpg",
     address: "Khulna-9100,Khulna,Bangladesh",
-    likes: 871265,
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
     caption: "Visit khulna district and other places",
-    postImage: "images/Posts/Post_2.jpg",
-    address: "Khulna-9100,Khulna,Bangladesh",
-    likes: 26699,
+    postImage: "images/posts/post2.jpg",
+    address: 'jasdhfaif',
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
     caption: "Visit khulna district and other places",
-    postImage: "images/Posts/Post_3.jpg",
+    postImage: "images/posts/post3.jpg",
     address: "Khulna-9100,Khulna,Bangladesh",
-    likes: 73552,
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
     caption: "Visit khulna district and other places",
-    postImage: "images/Posts/Post_4.jpg",
+    postImage: "images/posts/post4.jpg",
     address: "Khulna-9100,Khulna,Bangladesh",
-    likes: 45796,
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
     caption: "Visit khulna district and other places",
-    postImage: "images/Posts/Post_5.jpg",
+    postImage: "images/posts/post5.jpg",
     address: "Khulna-9100,Khulna,Bangladesh",
-    likes: 586123,
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
     caption: "Visit khulna district and other places",
-    postImage: "images/Posts/Post_6.jpg",
+    postImage: "images/posts/post6.jpg",
     address: "Khulna-9100,Khulna,Bangladesh",
-    likes: 1245683,
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
     caption: "Visit khulna district and other places",
-    postImage: "images/Posts/Post_7.jpg",
+    postImage: "images/posts/post7.jpg",
     address: "Khulna-9100,Khulna,Bangladesh",
-    likes: 124653,
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
     caption: "Visit khulna district and other places",
-    postImage: "images/Posts/Post_8.jpg",
+    postImage: "images/posts/post8.jpg",
     address: "Khulna-9100,Khulna,Bangladesh",
-    likes: 1286623,
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
     caption: "Visit khulna district and other places",
-    postImage: "images/Posts/Post_9.jpg",
+    postImage: "images/posts/post9.jpg",
     address: "Khulna-9100,Khulna,Bangladesh",
-    likes: 56123,
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
     caption: "Visit khulna district and other places",
-    postImage: "images/Posts/Post_10.jpg",
+    postImage: "images/posts/post10.jpg",
     address: "Khulna-9100,Khulna,Bangladesh",
-    likes: 12263,
   ),
 ];
 
 class PostsPage extends StatefulWidget {
-  const PostsPage({Key key}) : super(key: key);
+  const PostsPage({Key? key}) : super(key: key);
 
   @override
   _PostsPageState createState() => _PostsPageState();
@@ -232,8 +222,106 @@ class _PostsPageState extends State<PostsPage> {
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,
                                 fontStyle: FontStyle.italic,
-                                color: Color.fromRGBO(248, 248, 248,.6),
+                                color: Color.fromRGBO(248, 248, 248, .6),
                               ),
+                            ),
+                          ],
+                        ),
+
+                        //Caption text
+
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "${posts[index].caption}",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                fontStyle: FontStyle.normal,
+                                color: Color.fromRGBO(245, 244, 243, 1),
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                          ),
+                        ),
+
+                        //Caption image container
+
+                        Container(
+                          height: MediaQuery.of(context).size.height / 2.6,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('${posts[index].postImage}'),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                        ),
+
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          //crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Container(
+                              height: MediaQuery.of(context).size.height / 10,
+                              //width: MediaQuery.of(context).size.width/3,
+
+                              child: FlatButton.icon(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    CupertinoIcons.heart,
+                                    size: 10,
+                                    color: Color.fromRGBO(245, 245, 245, 1),
+                                  ),
+                                  label: Text(
+                                    "${posts[index].likes} likes",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color.fromRGBO(245, 245, 245, 1),
+                                    ),
+                                  )),
+                            ),
+                            Container(
+                              height: MediaQuery.of(context).size.height / 10,
+                              //width: MediaQuery.of(context).size.width/3,
+                              child: FlatButton.icon(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.add_comment_outlined,
+                                    size: 15,
+                                    color: Color.fromRGBO(245, 245, 245, 1),
+                                  ),
+                                  label: Text(
+                                    "Comments",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color.fromRGBO(245, 245, 245, 1),
+                                    ),
+                                  )),
+                            ),
+                            Container(
+                              height: MediaQuery.of(context).size.height / 10,
+                              //width: MediaQuery.of(context).size.width/3,
+                              child: FlatButton.icon(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.share_outlined,
+                                    size: 15,
+                                    color: Color.fromRGBO(245, 245, 245, 1),
+                                  ),
+                                  label: Text(
+                                    "Share",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color.fromRGBO(245, 245, 245, 1),
+                                    ),
+                                  )),
                             ),
                           ],
                         ),

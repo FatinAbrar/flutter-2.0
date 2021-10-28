@@ -1,79 +1,79 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_2/home_page.dart';
-import 'package:flutter_2/models/posts_Model.dart';
+
 import './post_models.dart';
 
 List<Posts> posts = [
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
-    caption: "Visit khulna district and other places",
+    caption: "Visit One piece world and other places",
     postImage: "images/posts/post1.jpg",
-    address: "Khulna-9100,Khulna,Bangladesh",
+    address: "Ennis lobby",
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
-    caption: "Visit khulna district and other places",
+    caption: "Visit One piece world and other places",
     postImage: "images/posts/post2.jpg",
-    address: 'jasdhfaif',
+    address: "Water 7 land",
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
-    caption: "Visit khulna district and other places",
+    caption: "Visit One piece world and other places",
     postImage: "images/posts/post3.jpg",
-    address: "Khulna-9100,Khulna,Bangladesh",
+    address: "Thilear Bark",
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
-    caption: "Visit khulna district and other places",
+    caption: "Visit One piece world and other places",
     postImage: "images/posts/post4.jpg",
-    address: "Khulna-9100,Khulna,Bangladesh",
+    address: "Marin Ford",
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
-    caption: "Visit khulna district and other places",
+    caption: "Visit One piece world and other places",
     postImage: "images/posts/post5.jpg",
-    address: "Khulna-9100,Khulna,Bangladesh",
+    address: "Fish Man Island",
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
-    caption: "Visit khulna district and other places",
+    caption: "Visit One piece world and other places",
     postImage: "images/posts/post6.jpg",
-    address: "Khulna-9100,Khulna,Bangladesh",
+    address: "pank Hazadrd",
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
-    caption: "Visit khulna district and other places",
+    caption: "Visit One piece world and other places",
     postImage: "images/posts/post7.jpg",
-    address: "Khulna-9100,Khulna,Bangladesh",
+    address: "Dressrosa",
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
-    caption: "Visit khulna district and other places",
+    caption: "Visit One piece world and other places",
     postImage: "images/posts/post8.jpg",
-    address: "Khulna-9100,Khulna,Bangladesh",
+    address: "Zua island",
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
     caption: "Visit khulna district and other places",
     postImage: "images/posts/post9.jpg",
-    address: "Khulna-9100,Khulna,Bangladesh",
+    address: "Whole cake island",
   ),
   Posts(
     username: "Fatin Abrar",
     userPhoto: "images/127452621_3762957817088549_8910024106066630309_n.jpg",
-    caption: "Visit khulna district and other places",
+    caption: "Visit One piece world and other places",
     postImage: "images/posts/post10.jpg",
-    address: "Khulna-9100,Khulna,Bangladesh",
+    address: "Wano",
   ),
 ];
 

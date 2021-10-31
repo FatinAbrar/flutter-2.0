@@ -338,25 +338,161 @@ class _TimeLinePageState extends State<TimeLinePage> {
                             //Cpation image container
 
                             Container(
-                              height: MediaQuery.of(context).size.height / 4,
-                              width: MediaQuery.of(context).size.width,
+                              height: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .height / 4,
+                              width: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .width,
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage(
-                                        "${timelinemodels[index].postsImageURl}"),
+                                        "${timelinemodels[index]
+                                            .postsImageURl}"),
                                     fit: BoxFit.fill),
                                 borderRadius: BorderRadius.circular(12),
                               ),
                             ),
+                            //Flat button Container
+
+                            Container(
+                              height: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .height / 8,
+                              width: MediaQuery
+                                  .of(context)
+                                  .size
+                                  .width,
+                              child: Row(
+                                children: [
+                                  Container(
+                                      height: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .height / 15,
+                                      width: MediaQuery
+                                          .of(context)
+                                          .size
+                                          .width / 3.5,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Color.fromRGBO(
+                                              245, 245, 245, 1),
+                                          width: 3,
+                                          style: BorderStyle.solid,
+                                        ),
+                                      ),
+                                      child: FlatButton.icon(
+                                          icon: Icon(
+                                            CupertinoIcons.heart,
+                                            color: Color.fromRGBO(
+                                                21, 21, 21, .6),
+                                            size: 15,
+                                          ),
+                                          label: Text(
+                                            "${timelinemodels[index]
+                                                .likes} likes",
+                                            style: TextStyle(
+                                              color: Color.fromRGBO(
+                                                  21, 21, 21, .6),
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 10,
+                                            ),
+                                          ),
+                                          onPressed: () {
+
+                                          }
+                                      )
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.symmetric(
+                                        horizontal: 12),
+                                    height: MediaQuery
+                                        .of(context)
+                                        .size
+                                        .height / 15,
+                                    width: MediaQuery
+                                        .of(context)
+                                        .size
+                                        .width / 3.6,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        color: Color.fromRGBO(245, 245, 245, 1),
+                                        width: 3,
+                                        style: BorderStyle.solid,
+                                      ),
+                                    ),
+                                    child: FlatButton.icon(
+                                      icon: Icon(
+                                        Icons.message_outlined,
+                                        size: 13,
+                                        color: Color.fromRGBO(21, 21, 21, 1),
+                                      ),
+                                      label: Text(
+                                        "Commentes",
+                                        style: TextStyle(
+                                          color: Color.fromRGBO(21, 21, 21, 1),
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                      onPressed: () {},
+                                    ),
+                                  ),
+                                  Container(
+                                    height: MediaQuery
+                                        .of(context)
+                                        .size
+                                        .height / 15,
+                                    width: MediaQuery
+                                        .of(context)
+                                        .size
+                                        .width / 3.6,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        color: Color.fromRGBO(245, 245, 245, 1),
+                                        width: 3,
+                                        style: BorderStyle.solid,
+                                      ),
+                                    ),
+                                    child: FlatButton.icon(
+                                      icon: Icon(
+                                        Icons.share,
+                                        size: 13,
+                                        color: Color.fromRGBO(21, 21, 21, 1),
+                                      ),
+                                      label: Text(
+                                        "Share",
+                                        style: TextStyle(
+                                          color: Color.fromRGBO(21, 21, 21, 1),
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                      onPressed: () {},
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+
                           ],
                         ),
                       ),
                     );
-                  }),
+                  }
+              ),
             ),
           ],
         ),
       ),
-    );
+    )
+    ,
+    );;
   }
+
+  ;
 }

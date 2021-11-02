@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_2/Splash_screen.dart';
+import 'package:flutter_2/splash_screen.dart';
 import 'package:flutter_2/home_page.dart';
 import 'package:flutter_2/timelinemodel.dart';
 
@@ -478,21 +478,15 @@ class _TimeLinePageState extends State<TimeLinePage> {
                                 ],
                               ),
                             ),
-
                           ],
                         ),
                       ),
                     );
-                  }
-              ),
+                  }),
             ),
           ],
         ),
       ),
-    )
-    ,
-    );;
+    );
   }
-
-  ;
 }

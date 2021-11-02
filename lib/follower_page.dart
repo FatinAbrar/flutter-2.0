@@ -1,15 +1,27 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_2/follower_modle.dart';
 import 'package:flutter_2/home_page.dart';
 
-class FollowingPage extends StatefulWidget {
-  const FollowingPage({Key? key}) : super(key: key);
+final List<Follower> followers = [
+  Follower(username: "kazi Afroz", friends: 345, image: ""),
+  Follower(username: "Humayun kabir", friends: 456, image: ""),
+  Follower(username: "Murshedul Haque", friends: 1098, image: ""),
+  Follower(username: "Abir Hasan", friends: 456, image: ""),
+  Follower(username: "Murshedul Hossain Babla", friends: 454, image: ""),
+  Follower(username: "kabir Ali", friends: 3232, image: ""),
+  Follower(username: "Ali Ahammed Jubayer", friends: 545, image: ""),
+  Follower(username: "Ali Hasan Mashror", friends: 302, image: ""),
+  Follower(username: "Mashrafee Bin Mortaza", friends: 511, image: ""),
+  Follower(username: "Mehedi Hasan", friends: 111, image: ""),
+];
 
+class FollowerPage extends StatefulWidget {
   @override
-  _FollowingPageState createState() => _FollowingPageState();
+  _FollowerPageState createState() => _FollowerPageState();
 }
 
-class _FollowingPageState extends State<FollowingPage> {
+class _FollowerPageState extends State<FollowerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +43,7 @@ class _FollowingPageState extends State<FollowingPage> {
           },
         ),
         title: Text(
-          "Following Page",
+          "Follower Page",
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w700,
@@ -50,16 +62,16 @@ class _FollowingPageState extends State<FollowingPage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context)=>FollowingPage(),
+                  builder: (context) => FollowerPage(),
                 ),
               );
             },
           ),
         ],
       ),
-      extendBodyBehindAppBar: true,
-      body: Center(
-        child: Text("Following Page"),
+      body: Align(
+        alignment: Alignment.center,
+        child: Text("Follower Page"),
       ),
     );
   }

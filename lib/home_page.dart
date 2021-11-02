@@ -1,10 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_2/Splash_screen.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_2/edit_page.dart';
-import 'package:flutter_2/Following_page.dart';
-import 'package:flutter_2/Follower_page.dart';
-import 'package:flutter_2/Posts_page.dart';
+import 'package:flutter_2/follower_page.dart';
+import 'package:flutter_2/following_page.dart';
+import 'package:flutter_2/posts_page.dart';
+import 'package:flutter_2/splash_screen.dart';
+import 'package:flutter_2/timeline.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,15 +15,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  get friends => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: (){
+          onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context)=>SplashScreen(),
+              MaterialPageRoute(
+                builder: (context) => SplashScreen(),
               ),
             );
           },
@@ -303,12 +307,136 @@ class _HomePageState extends State<HomePage> {
                           style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w500,
-                              color: Color.fromRGBO(0, 0, 0, .5)
+                              color: Color.fromRGBO(0, 0, 0, .5)),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+
+              //photo Gallery container
+
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                child: Container(
+                  height: MediaQuery.of(context).size.height / .4,
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(
+                    children: [
+                      // Text Container
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height / 15,
+                          width: MediaQuery.of(context).size.width,
+                          child: Text(
+                            "All Photos",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                              color: Color.fromRGBO(21, 21, 21, .6),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 5),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height / 15,
+                          width: MediaQuery.of(context).size.width,
+                          child: Text(
+                            "Posts Photos",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                              color: Color.fromRGBO(21, 21, 21, .6),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height / 1.5,
+                          width: MediaQuery.of(context).size.width,
+                          child: GridView.builder(
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 2,
+                                    crossAxisSpacing: 10,
+                                    mainAxisSpacing: 10,
+                                    childAspectRatio: 3 / 2),
+                            itemCount: images.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+                                height: MediaQuery.of(context).size.height / 4,
+                                width: MediaQuery.of(context).size.width / 4,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage("${images[index]}"),
+                                      fit: BoxFit.fill),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 5),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height / 15,
+                          width: MediaQuery.of(context).size.width,
+                          child: Text(
+                            "Friends Photos",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                              color: Color.fromRGBO(21, 21, 21, .6),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height / 1.2,
+                          width: MediaQuery.of(context).size.width,
+                          child: GridView.builder(
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 2,
+                                    crossAxisSpacing: 10,
+                                    mainAxisSpacing: 10,
+                                    childAspectRatio: 3 / 2),
+                            itemCount: friends.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+                                height: MediaQuery.of(context).size.height / 4,
+                                width: MediaQuery.of(context).size.width / 4,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage("${friends[index]}"),
+                                      fit: BoxFit.fill),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

@@ -14,14 +14,14 @@ class _FollowingPageState extends State<FollowingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(249, 250, 251, 1),
+        backgroundColor: const Color.fromRGBO(249, 250, 251, 1),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
-            color: Color.fromRGBO(86,86,86,1),
+            color: Color.fromRGBO(86, 86, 86, 1),
           ),
           iconSize: 20,
-          onPressed: (){
+          onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(
@@ -30,7 +30,7 @@ class _FollowingPageState extends State<FollowingPage> {
             );
           },
         ),
-        title: Text(
+        title: const Text(
           "Following Page",
           style: TextStyle(
             fontSize: 20,
@@ -41,7 +41,7 @@ class _FollowingPageState extends State<FollowingPage> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.refresh_outlined,
               color: Color.fromRGBO(100, 101, 103, 1),
             ),
@@ -50,7 +50,7 @@ class _FollowingPageState extends State<FollowingPage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context)=>FollowingPage(),
+                  builder: (context) => const FollowingPage(),
                 ),
               );
             },
@@ -58,7 +58,7 @@ class _FollowingPageState extends State<FollowingPage> {
         ],
       ),
       extendBodyBehindAppBar: true,
-      body: Center(
+      body: const Center(
         child: Text("Following Page"),
       ),
     );

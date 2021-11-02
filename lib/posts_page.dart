@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_2/home_page.dart';
 
-import './post_models.dart';
+import 'models/post_model.dart';
 
 List<Posts> posts = [
   Posts(
@@ -89,23 +89,23 @@ class _PostsPageState extends State<PostsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(249, 250, 251, 1),
+        backgroundColor: const Color.fromRGBO(249, 250, 251, 1),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
-            color: Color.fromRGBO(86,86,86,1),
+            color: Color.fromRGBO(86, 86, 86, 1),
           ),
           iconSize: 20,
-          onPressed: (){
+          onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context)=>HomePage(),
+                builder: (context) => const HomePage(),
               ),
             );
           },
         ),
-        title: Text(
+        title: const Text(
           "Posts Page",
           style: TextStyle(
             fontSize: 20,
@@ -116,7 +116,7 @@ class _PostsPageState extends State<PostsPage> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.refresh_outlined,
               color: Color.fromRGBO(100, 101, 103, 1),
             ),
@@ -125,7 +125,7 @@ class _PostsPageState extends State<PostsPage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context)=>PostsPage(),
+                  builder: (context) => const PostsPage(),
                 ),
               );
             },
@@ -137,7 +137,7 @@ class _PostsPageState extends State<PostsPage> {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          padding:EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 12,
             vertical: 20,
           ),
@@ -145,11 +145,11 @@ class _PostsPageState extends State<PostsPage> {
             itemCount: posts.length,
             itemBuilder: (BuildContext context, int index){
               return Container(
-                  height: MediaQuery.of(context).size.height/1.5,
+                  height: MediaQuery.of(context).size.height / 1.5,
                   width: MediaQuery.of(context).size.width,
-                  margin: EdgeInsets.only(top: 25),
+                  margin: const EdgeInsets.only(top: 25),
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
@@ -172,7 +172,8 @@ class _PostsPageState extends State<PostsPage> {
                           children: [
                             CircleAvatar(
                               radius: 25,
-                              backgroundImage: AssetImage('${posts[index].userPhoto}'),
+                              backgroundImage:
+                                  AssetImage(posts[index].userPhoto),
                             ),
                             SizedBox(
                               width: MediaQuery.of(context).size.width/20,
@@ -181,20 +182,21 @@ class _PostsPageState extends State<PostsPage> {
                               textAlign: TextAlign.start,
                               text: TextSpan(
                                   text: "${posts[index].username}\n",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontStyle: FontStyle.normal,
                                     fontWeight: FontWeight.w700,
                                     fontSize: 18,
-                                    color: Color.fromRGBO(248, 248, 248,.6),
+                                    color: Color.fromRGBO(248, 248, 248, .6),
                                   ),
                                   children: [
                                     TextSpan(
                                       text: "${DateTime.now()}",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontStyle: FontStyle.normal,
                                         fontWeight: FontWeight.w700,
                                         fontSize: 15,
-                                        color: Color.fromRGBO(248, 248, 248,.6),
+                                        color:
+                                            Color.fromRGBO(248, 248, 248, .6),
                                       ),
                                     )
                                   ]
@@ -208,17 +210,17 @@ class _PostsPageState extends State<PostsPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.location_on_outlined,
                               size: 18,
-                              color: Color.fromRGBO(248, 248, 248,.6),
+                              color: Color.fromRGBO(248, 248, 248, .6),
                             ),
                             SizedBox(
                               width: MediaQuery.of(context).size.width/30,
                             ),
                             Text(
-                              "${posts[index].address}",
-                              style: TextStyle(
+                              posts[index].address,
+                              style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,
                                 fontStyle: FontStyle.italic,
@@ -235,8 +237,8 @@ class _PostsPageState extends State<PostsPage> {
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              "${posts[index].caption}",
-                              style: TextStyle(
+                              posts[index].caption,
+                              style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
                                 fontStyle: FontStyle.normal,
@@ -265,32 +267,32 @@ class _PostsPageState extends State<PostsPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           //crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Container(
+                            SizedBox(
                               height: MediaQuery.of(context).size.height / 10,
                               //width: MediaQuery.of(context).size.width/3,
 
                               child: FlatButton.icon(
                                   onPressed: () {},
-                                  icon: Icon(
+                                  icon: const Icon(
                                     CupertinoIcons.heart,
                                     size: 10,
                                     color: Color.fromRGBO(245, 245, 245, 1),
                                   ),
                                   label: Text(
                                     "${posts[index].likes} likes",
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w500,
                                       color: Color.fromRGBO(245, 245, 245, 1),
                                     ),
                                   )),
                             ),
-                            Container(
+                            SizedBox(
                               height: MediaQuery.of(context).size.height / 10,
                               //width: MediaQuery.of(context).size.width/3,
                               child: FlatButton.icon(
                                   onPressed: () {},
-                                  icon: Icon(
+                                  icon: const Icon(
                                     Icons.add_comment_outlined,
                                     size: 15,
                                     color: Color.fromRGBO(245, 245, 245, 1),

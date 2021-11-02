@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_2/Splash_screen.dart';
 import 'package:flutter_2/home_page.dart';
-import 'package:flutter_2/timelinemodel.dart';
+import 'package:flutter_2/models/timelinemodel.dart';
+import 'package:flutter_2/screens/splash_screen.dart';
 
 List<String> images = [
   "images/posts/post1.jpg",
@@ -211,13 +211,14 @@ class _TimeLinePageState extends State<TimeLinePage> {
             // Post container
             Expanded(
               child: ListView.builder(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   itemCount: timelinemodels.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                       height: MediaQuery.of(context).size.height / 1.5,
                       width: MediaQuery.of(context).size.width,
-                      margin: EdgeInsets.symmetric(vertical: 15),
+                      margin: const EdgeInsets.symmetric(vertical: 15),
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           begin: Alignment.topLeft,
@@ -251,12 +252,12 @@ class _TimeLinePageState extends State<TimeLinePage> {
                                   CircleAvatar(
                                     radius: 30,
                                     backgroundImage: AssetImage(
-                                        "${timelinemodels[index].profileImageURL}"),
+                                        timelinemodels[index].profileImageURL),
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 10),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10),
                                       child: RichText(
                                         textAlign: TextAlign.justify,
                                         text: TextSpan(
@@ -426,12 +427,12 @@ class _TimeLinePageState extends State<TimeLinePage> {
                                       ),
                                     ),
                                     child: FlatButton.icon(
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.message_outlined,
                                         size: 13,
                                         color: Color.fromRGBO(21, 21, 21, 1),
                                       ),
-                                      label: Text(
+                                      label: const Text(
                                         "Commentes",
                                         style: TextStyle(
                                           color: Color.fromRGBO(21, 21, 21, 1),
@@ -459,7 +460,7 @@ class _TimeLinePageState extends State<TimeLinePage> {
                                       ),
                                     ),
                                     child: FlatButton.icon(
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.share,
                                         size: 13,
                                         color: Color.fromRGBO(21, 21, 21, 1),
@@ -478,21 +479,15 @@ class _TimeLinePageState extends State<TimeLinePage> {
                                 ],
                               ),
                             ),
-
                           ],
                         ),
                       ),
                     );
-                  }
-              ),
+                  }),
             ),
           ],
         ),
       ),
-    )
-    ,
-    );;
+    );
   }
-
-  ;
 }
